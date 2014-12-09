@@ -1,0 +1,86 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#login {
+  background-position: left top;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#login .pattern-overlay {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background-color: #28bbe8;
+}
+#login .pattern-overlay .container .loginform {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#login .pattern-overlay .container .loginform fieldset {
+  border: 0;
+}
+#login .pattern-overlay .container .loginform .logo {
+  display: block;
+  margin: 20px auto;
+}
+#login .pattern-overlay .container .loginform p {
+  display: none;
+}
+#login .pattern-overlay .container .loginform h1{
+  text-align: center;
+  color: #fff;
+}
+#login .pattern-overlay .container .loginform .text input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#login .pattern-overlay .container .loginform .text label {
+  color: #fff;
+}
+#login .pattern-overlay .container .loginform .checkbox input {
+  margin: 0;
+  margin-top: 3px;
+  display: inline-block;
+}
+#login .pattern-overlay .container .loginform .checkbox label {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#login .pattern-overlay .container .loginform .Actions {
+  padding-left: 15px;
+}
+#login .pattern-overlay .container .loginform .Actions input {
+  width: 100%;
+  line-height: 40px;
+  background-color: #454545;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+}
+#login .pattern-overlay .container .loginform .Actions p {
+  padding-top: 10px;
+  font-size: 14px;
+  display: block;
+}
+
+#login .pattern-overlay .container .loginform #ForgotPassword a {
+  color: #fff;
+}

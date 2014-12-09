@@ -1,0 +1,40 @@
+<ion-nav-bar class="orange_theme">
+  <div class="buttons left-buttons">
+    <span class="">
+      <button side="left" class="button button-icon" ng-click="ResultModalClose()">ANNULEER</button>
+    </span>
+  </div>
+  <h1 class="title">NIEUWE OEFENING</h1>
+  <div class="buttons right-buttons">
+    <span class="">
+      <button side="right" class="button button-icon" ng-click="ResultModalSave()">OPSLAAN</button>
+    </span>
+  </div>
+</ion-nav-bar>
+
+<ion-view>
+  <ion-content class="has-header orange_theme" scroll="false">
+    <header class="single resultModal">
+      <div class="head_score s{{oefeningen[ResultModalID.ID].FearScore}}"><div>{{oefeningen[ResultModalID.ID].FearScore}}</div></div>
+      <div class="head_box">
+        <h1>{{oefeningen[ResultModalID.ID].Title}}</h1>
+        <span>{{oefeningen[ResultModalID.ID].Prevention}}</span>
+      </div>
+    </header>
+    
+    <form ng-submit="ResultModalSave()" class="formResultModal">
+      <span class="formSpan">Hoe angstig was je tijdens het <br >uitvoeren van deze oefening?</span>
+      <div class="containerSlider">
+        <div id='circle'>
+          <div id='slider'></div>
+        </div>
+        <canvas id="counter" width="250" height="250"></canvas>
+      </div>
+      
+      <input id="range" name="range" type="input" min="0" max="100" style="display:none;"/>
+      <span id="test" type="text" value="" class="range" data-max="100" data-min="0" data-step="10" name="angle"></span>
+      <label class="resultFormLabel" for="resultFormTextarea"><span class="ion-compose"></span><span>Aantekening toevoegen:</span></label>
+      <textarea name="resultFormTextarea" id="resultFormTextarea" ng-model="ResultModalData.log" placeholder="Hoe heb je de oefening ervaren? Wat ging er goed, wat kan beter?"></textarea>
+    </form>
+  </ion-content>
+</ion-view>

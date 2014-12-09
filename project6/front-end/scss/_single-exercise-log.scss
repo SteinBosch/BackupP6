@@ -1,0 +1,72 @@
+
+/*single oefening - backlog*/
+
+.log {
+    padding: 1em;
+    position: relative;
+}
+.log_score {
+    width: 2em;
+    height: 2em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    border-radius: 5em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.log_score div {
+    display: table;
+    margin: auto;
+    font-size: 20px;
+    top: 6px;
+    position: relative;
+    color: #fdfdfd;
+}
+.middle {
+    width: 5px;
+    height: 175px;
+    display: inline-block;
+}
+.text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3em;
+    width: 87%;
+    border: 1px solid #A0A0A0;
+    padding: 1em;
+    background-color: white;
+}
+.log_text {
+    margin-top: 1em;
+    line-height: normal;
+}
+.date {
+    font-family: 'open_sanssemibold';
+    font-size: 15px;
+}
+.backlog {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 16px;
+    position: relative;
+}
+.backlog_line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #A0A0A0;
+    left: 2em;
+    z-index: -1;
+}
+.middle_line {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4em;
+    height: 1px;
+    border-top: 1px solid #A0A0A0;
+    z-index: -1;
+}

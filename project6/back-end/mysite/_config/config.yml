@@ -1,0 +1,50 @@
+---
+Name: mysite
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'beyondOCD'
+LeftAndMain:
+  extra_requirements_css:
+    - mysite/css/cms.css
+# API access
+TherapyGroup:
+  api_access: true
+Patient:
+  api_access: true
+Therapist:
+  api_access: true
+Exercise:
+  api_access: true
+Message:
+  api_access: true
+# RestfulAPI config
+RESTfulAPI:
+  authentication_policy: true
+  access_control_policy: 'ACL_CHECK_CONFIG_ONLY'
+  dependencies:
+    authenticator: '%$RESTfulAPI_TokenAuthenticator'
+  cors:
+    Enabled: true
+    Allow-Origin: '*'
+    Allow-Headers: '*'
+    Allow-Methods: 'OPTIONS, GET, POST, PUT'
+    Max-Age: 86400
+  embedded_records:
+    Patient:
+      - 'Exercises'
+      - 'Therapist'
+      - 'TherapyGroup'
+      - 'Messages'
+    Exercise:
+      - 'Messages'
+  RESTfulAPI_TokenAuthenticator:
+    tokenOwnerClass: 'Member'
+Member:
+  extensions:
+    - RESTfulAPI_TokenAuthExtension

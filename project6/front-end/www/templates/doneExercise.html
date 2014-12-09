@@ -1,0 +1,21 @@
+<ion-view title="SELECTEER EEN OEFENING">
+<ion-nav-bar class="orange_theme">
+  <div class="buttons left-buttons">
+    <span class="">
+      <a side="left" class="button button-icon ion-chevron-left" href="#/app/home"></a>
+    </span>
+  </div>
+  <h1 class="title">SELECTEER EEN OEFENING</h1>
+</ion-nav-bar>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="list_oefeningen" ng-repeat="item in oefeningen | orderBy:natural('FearScore') " ng-click="ResultModalShow({{item.ID}})">
+        <div class='list_score s{{item.FearScore}}'>{{item.FearScore}}</div>
+        <div class="list_box">
+          <div class="list_oefening">{{item.Title}}</div>
+          <div class="list_responsprev">{{item.Prevention}}</div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

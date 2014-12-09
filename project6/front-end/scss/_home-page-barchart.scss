@@ -1,0 +1,109 @@
+.profileChart {
+    position: relative;
+}
+
+.barChart {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid;
+}
+.barChartBar {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: bottom;
+}
+.barChartCount {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.barChartCountLine {
+    height: 1px;
+    width: 88%;
+    border-bottom: 1px dashed #E2E2E2;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+.barChartCountLevel {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.barChartBars {
+    vertical-align: bottom;
+    line-height: 249px;
+    z-index: 1;
+    margin-left: 45px;
+}
+
+.barChartWeeks {
+    display: inline-block;
+    text-align: center;
+}
+
+.barChartWeek .barChartWeekFirstSpan {
+    margin-left: 10px;
+    margin-right: 2px;
+    font-size: 14px;
+}
+.barChartWeek .barChartWeekFirstSpan.Datum {
+    margin-left: 7px;
+    margin-right: 0px;
+}
+
+.barChartWeek span {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 12px;
+}
+.barChartWeeks.Datum span{
+    margin-right: 10px;
+    margin-left: 0;
+}
+.barChartHead {
+    padding: 10px;
+    position: relative;
+}
+
+.barChartHead h2 {
+    font-size: 18px;
+}
+
+.barChartHead span {
+    color: #A0A0A0;
+}
+
+button.ChooseMonthToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    line-height: 20px;
+    min-height: 20px;
+    
+}
+.ChooseMonthToggle:before {
+    margin-right: 5px;
+    color: #A0A0A0;
+}
+
+.ChooseMonth {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: none;
+    button.ChooseMonthButton {
+        height: 85px;
+        width: 33.3333%;
+        padding: 0;
+        border: 1px solid #E2E2E2;
+    }
+}
+.ChooseMonth.show {
+    display: block;
+}

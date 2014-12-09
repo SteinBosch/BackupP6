@@ -1,0 +1,43 @@
+/*Lijst oefeningen */
+
+.list_oefeningen a.item-content {
+    padding: 0;
+    height: 5em;
+}
+.list_oefeningen:nth-child(even){
+    background-color: #F4F4F4;
+}
+.list_oefeningen {
+    border: none;
+    padding: 0;
+}
+.list_score {
+    padding: 10px 0;
+    width: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'open_sanssemibold';
+    font-size: 18px;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    border-radius: 5em;
+    margin-left: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 40px;
+    margin-left: 1em;
+}
+.list_box {
+    margin-left: 4em;
+    padding: 1em;
+}
+.list_oefening {
+    font-family: 'open_sanssemibold';
+    white-space: normal;
+}
+.list_responsprev {
+    color: #A0A0A0;
+    margin-top: 6px;
+}

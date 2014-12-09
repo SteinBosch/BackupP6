@@ -1,0 +1,43 @@
+.contentPushDown {
+/*    margin-top: 150px;
+*/    visibility: hidden;
+}
+.contentPushDown.activeTab {
+    visibility: visible;
+}
+.buttonTabsContainer {
+    height: 50px;
+    background-color: white;
+}
+.buttonTabsContainer button.button {
+    width: 50%;
+    padding: 0;
+    height: 50px;
+    font-family: 'open_sanssemibold';
+    line-height: 50px;
+}
+.resultEnter {
+    background-color: #F4F4E9;
+}
+.buttonTabsContainer button.button.resultEnterTab, .buttonTabsContainer button.button.groupViewTab {
+    float: right;
+}
+.buttonTabsContainer button.button.resultEnterTab.activeTab, .buttonTabsContainer button.button.groupViewTab.activeTab  {
+    border-left: 1px solid #E2E2E2;
+}
+.buttonTabsContainer button.button.resultSideTab, .buttonTabsContainer button.button.ownViewTab {
+    float: left;
+}
+.buttonTabsContainer button.button.resultSideTab.activeTab, .buttonTabsContainer button.button.ownViewTab.activeTab  {
+    border-right: 1px solid #E2E2E2;
+}
+.buttonTabsContainer button.button.activeTab {
+    border-bottom: 5px solid #F38630;
+}
+button.button.ResultModalSave {
+    width: 100%;
+    background-color: #F38630;
+    color: white;
+    height: 50px;
+    font-family: 'open_sanssemibold';
+}

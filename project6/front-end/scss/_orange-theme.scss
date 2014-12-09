@@ -1,0 +1,79 @@
+/* Orange Theme */
+
+.orange_theme.bar {
+    background-color: #FA6900;
+    visibility: visible;
+}
+ion-content.orange_theme {
+    background-color: #F4F4E9;
+}
+.orange_theme label, .formResultModal label  {
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    padding-left: 14px;
+    font-family: 'open_sanssemibold';
+    position: relative;
+}
+.orange_theme label output {
+    font-family: 'open_sanssemibold';
+}
+.orange_theme input, .formResultModal input {
+    height: 50px;
+    display: block;
+    line-height:100%;
+    font-size: 16px;
+    background-color: white;
+    padding-left: 14px;
+    width: 100%;
+}
+.orange_theme input[type=range], .formResultModal input[type=range] {
+    padding-left: 0px;
+    width: 75%;
+    margin: auto;
+}
+.fear_range {
+    background-color: white;
+    position: relative;
+}
+.fear_range span {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+}
+.fear_range span.left {
+    left: 14px;
+}
+.fear_range span.right {
+    right: 14px;
+}
+.FearScore {
+    width: 2em;
+    height: 2em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    border-radius: 5em;
+    position: absolute;
+    top: 7px;
+    left: 225px;
+    line-height: 2em;
+}
+.FearScore div {
+    display: table;
+    margin: auto;
+    font-size: 18px;
+    color: #fdfdfd;
+}
+
+span.form_error {
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+    font-family: open_sanssemibold;
+    text-align: center;
+    margin-top: 10px;
+    color: #FA6900;
+}

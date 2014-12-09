@@ -1,0 +1,80 @@
+/*single oefening - graph*/
+.graph_header {
+    height: 4em;
+    width: 100%;
+    background-color: #f4f4e9;
+    padding: 1em;
+    h2 {
+        font-size: 24px;
+        line-height: 24px;
+        vertical-align: top;
+        margin-bottom: 0;
+    }
+    .score {
+        width: 2em;
+        height: 2em;
+        -webkit-border-radius: 5em;
+        -moz-border-radius: 5em;
+        border-radius: 5em;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: -2px;
+        div {
+            display: table;
+            margin: auto;
+            font-size: 20px;
+            top: 4px;
+            position: relative;
+            color: #fdfdfd;
+        }
+    }
+}
+
+.graph {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    padding: 1em;
+    background-color: #f4f4e9;
+}
+.count {
+    float: left;
+    width: 100%;
+    div.graph_numb {
+        line-height: 14px;
+        font-size: 16px;
+        position: relative;
+    }
+}
+
+div.graph_line {
+    display: block;
+    width: 93%;
+    height: 1px;
+    margin-left: 2em;
+    position: absolute;
+    top: 7px;
+    border-top: 1px dashed #e2e2e2;
+}
+
+.graph_points {
+    height: 100%;
+    width: 90%;
+    margin-left: 10%;
+    position: relative; 
+    z-index: 10;
+}
+.graph_point {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    border-radius: 5em;
+    background-color: #454545;
+}
+.graph_x-as {
+    border-top: 1px solid;
+    width: 90%;
+    margin-left: 6%;
+}

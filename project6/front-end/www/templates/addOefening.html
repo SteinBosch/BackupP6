@@ -1,0 +1,31 @@
+<ion-nav-bar class="orange_theme">
+  <div class="buttons left-buttons">
+    <span class="">
+      <button side="left" class="button button-icon" ng-click="addOefeningClose()">ANNULEER</button>
+    </span>
+  </div>
+  <h1 class="title">NIEUWE OEFENING</h1>
+  <div class="buttons right-buttons">
+    <span class="">
+      <button side="right" class="button button-icon" ng-click="addOefeningSave()">OPSLAAN</button>
+    </span>
+  </div>
+</ion-nav-bar>
+
+<ion-view>
+  <ion-content class="has-header orange_theme">
+    <form ng-submit="addOefeningSave()">
+      <label for="title">Exposure:</label>
+      <input type="text" name="title" id="title" ng-model="addOefeningData.Exposure" placeholder="Bijv. het aanraken van trapleuningen..">
+      <label for="prevention">Responsepreventie:</label>
+      <input type="text" name="prevention" id="prevention" ng-model="addOefeningData.Prevention" placeholder="Bijv. niet handen wassen..">
+      <label for="points">Plaats in de hiërarchie: <div class="FearScore s{{addOefeningData.FearScore}}"><div>{{addOefeningData.FearScore}}</div></div></label>
+      <div class="fear_range">
+        <span class="left">10</span>
+        <input type="range" name="points" id="points" value="10" min="10" step="10" max="100" ng-model="addOefeningData.FearScore">
+        <span class="right">100</span>
+      </div>
+    </form>
+    <span class="{{error.class}}">{{error.text}}</span>
+  </ion-content>
+</ion-view>

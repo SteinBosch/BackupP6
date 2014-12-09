@@ -1,0 +1,72 @@
+/*HOME PAGE*/
+.contentPushDown50 {
+    margin-top: 50px;
+    visibility: hidden;
+}
+.contentPushDown50.activeTab {
+    visibility: visible;
+}
+
+.ownProfile {
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #F4F4F4;
+}
+
+.ownProfilePic {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.ownProfilePic img {
+    width: 100%;
+    height: auto;
+}
+
+.ownProfileContent {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.ownProfileContent h1 {
+    font-size: 16px;
+    margin-bottom: 15px; 
+}
+
+.ownProfileContent span {
+    display: block;
+}
+
+.ownProfileicon {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.ownProfileicon img {
+    width: 49px;
+    margin: auto;
+}
+
+button.button.ownProfileSettingsButton {
+    border: 1px solid #E2E2E2;
+    min-height: 35px;
+    line-height: 35px;
+    background-color: white;
+    font-size: 16px;
+    color: #222222;
+    font-family: 'open_sanssemibold';
+}
+
+.ownProfileSettings {
+    padding: 10px 0;
+}
+
+button.button.ownProfileSettingsButton span {
+    font-size: 25px;
+    color: #222222;
+}

@@ -1,0 +1,30 @@
+<div class="modal login-splash">
+  <ion-content>
+    <div class="logo">
+      <img src="img/logo.svg" alt="AMC App">
+      <h1>AMC APP</h1>
+    </div>
+    <div class="loader" ng-class="loaderclass">
+      <i class="icon ion-loading-c"></i>
+    </div>
+    <form ng-submit="doLogin()" class="loginform" ng-class="formclass">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Emailadres</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Wachtwoord</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item message" ng-class="messageclass">
+          <span>{{ loginData.succes }}</span>
+        </label>
+        <label class="item">
+          <button class="button button-block" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</div>
+

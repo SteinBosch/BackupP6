@@ -1,0 +1,7 @@
+#Menu-Help,
+#Menu-ReportAdmin,
+#Menu-CMSPagesController,
+#Menu-AssetAdmin,
+#Menu-CMSSettingsController {
+  display: none !important;
+}

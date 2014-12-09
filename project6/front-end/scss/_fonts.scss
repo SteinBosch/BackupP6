@@ -1,0 +1,43 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('font/opensans-semibold-webfont.eot');
+    src: url('font/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-semibold-webfont.woff2') format('woff2'),
+         url('font/opensans-semibold-webfont.woff') format('woff'),
+         url('font/opensans-semibold-webfont.ttf') format('truetype'),
+         url('font/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('font/opensans-regular-webfont.eot');
+    src: url('font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-regular-webfont.woff2') format('woff2'),
+         url('font/opensans-regular-webfont.woff') format('woff'),
+         url('font/opensans-regular-webfont.ttf') format('truetype'),
+         url('font/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('font/opensans-bold-webfont.eot');
+    src: url('font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-bold-webfont.woff2') format('woff2'),
+         url('font/opensans-bold-webfont.woff') format('woff'),
+         url('font/opensans-bold-webfont.ttf') format('truetype'),
+         url('font/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	font-family: 'open_sansregular';
+    color: #454545;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'open_sanssemibold';
+}

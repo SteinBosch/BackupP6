@@ -1,0 +1,96 @@
+<ion-view title="Overzicht" class="profile">
+
+    <ion-nav-buttons side="right">
+      <a class="button button-icon ion-chevron-right" href="#/app/oefeningen"></a>
+    </ion-nav-buttons>
+
+  	<ion-content class="has-header">
+	  	<div class="buttonTabsContainer">
+	  		<button class="ownViewTab activeTab button button-icon" ng-click="buttonTabsClick()">MIJN PROFIEL</button>
+	  		<button class="groupViewTab button button-icon" ng-click="buttonTabsClick()">GROEPSOVERZICHT</button>
+  		</div>
+	</ion-content>
+
+	<ion-content class="has-header contentPushDown50 ownView activeTab">
+	<div class="ownProfile">
+		<div class="ownProfilePic">
+			<img src="img/avatar.png" alt="Avatar">
+		</div>
+		<div class="ownProfileContent">
+			<h1>{{data.FirstName}} {{data.Surname}}</h1>
+			<span>Oefeningen: {{data.TotalExercises}}</span>
+			<span>Therapeut: {{data.Therapist.FirstName | capitalize | firstLetterFilter}}. {{data.Therapist.Surname | capitalize}}</span>
+		</div>
+		<div class="ownProfileicon">
+			<img src="img/{{data.currentLevel}}Icon.png">
+			{{data.currentLevel | capitalize }}
+		</div>
+		<div class="ownProfileSettings">
+			<button class="button button-icon ownProfileSettingsButton" ng-click="ownProfileSettingsToggle()"><span class="ion-gear-a"></span> Instellingen</button>
+		</div>
+	</div>
+
+	<div class="activityShare">
+		<span>Deel mijn activiteiten met de groep: </span>
+
+			<div class="switch round large">
+			  <input id="exampleRadioSwitch3" type="checkbox">
+			  <label for="exampleRadioSwitch3"></label>
+			</div>
+	</div>
+
+	<div class="profileChart">
+		<div class="barChartHead">
+		<h2 >Activiteitslevel: {{choosenMonth.activityLevel}} </h2>   		
+		<button class="ion-chevron-left ChooseMonthToggle button button-icon" ng-click="chooseMonth()">{{choosenMonth.month | capitalize}}</button>
+
+		<span>Aantal oefeningen in {{choosenMonth.month}}</span>
+		</div>
+		<div class="barChart">
+			<div class="barChartCount">
+		  	</div>
+		  	<div class="barChartBars">
+		  	</div>
+		</div>
+		<div class="barChartWeek">
+	  		<span class="barChartWeekFirstSpan {{weekOrDay}}">{{weekOrDay}}:</span>
+	  		<div class="barChartWeeks {{weekOrDay}}"></div>
+	  	</div>
+	  	<div class="ChooseMonth ">
+	  		<button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('januarie')">januarie</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('februarie')">februarie</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('maart')">maart</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('april')">april</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('mei')">mei</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('juni')">juni</button><!--
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('juli')">juli</button><!--
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('augustus')">augustus</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('september')">september</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('oktober')">oktober</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('november')">november</button><!-- 
+	  		 --><button class="ChooseMonthButton button button-icon" ng-click="ThisMonth('december')">december</button>
+	  	</div>
+  	</div>
+
+
+	<div class="latestExercises">
+		<h2>Laatst gedane oefeningen:</h2>
+		<div class="latestExercise" ng-repeat="item in latestExercise track by $index">
+			<div class="WrittenDate">
+				<span>{{item.WrittenDate}}</span>
+				<div class="line"></div>
+			</div>
+			<div class="latestExerciseContent">
+		        <div class='list_score s{{item.FearScore}}'>{{item.FearScore}}</div>
+		        <div class="list_box">
+		          <div class="list_oefening">{{item.Exposure}}</div>
+		          <div class="list_responsprev">{{item.Prevention}}</div>
+		        </div>
+	        </div>
+	    </div>
+	</div>
+	</ion-content>
+  	<ion-content class="has-header contentPushDown50 groupView">
+  		<span>Het groepsoverzicht is nog niet beschikbaar</span>
+  	</ion-content>
+</ion-view>

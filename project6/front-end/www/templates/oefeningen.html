@@ -1,0 +1,21 @@
+<ion-view title="Oefeningen">
+  <ion-nav-buttons side="left">
+    <a class="button button-icon ion-person" href="#/app/profiel">
+    </a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-icon ion-plus" ng-click="addOefeningShow()">
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="list_oefeningen" ng-repeat="item in oefeningen | orderBy:natural('FearScore') " href="#/app/oefening/{{item.ID}}">
+        <div class='list_score s{{item.FearScore}}'>{{item.FearScore}}</div>
+        <div class="list_box">
+          <div class="list_oefening">{{item.Exposure}}</div>
+          <div class="list_responsprev">{{item.Prevention}}</div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

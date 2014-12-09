@@ -1,0 +1,71 @@
+<ion-view title="Oefening">
+	<ion-nav-buttons side="left">
+    	<a class="button button-icon ion-chevron-left reverse" href="#/app/oefeningen" ng-click="oefeningModalClose()"></a>
+  	</ion-nav-buttons>
+
+  	<ion-content class="has-header contentPushDown resultSide ">
+  	<header class="single">
+			<div class="head_score s{{ThisoefeningModal.FearScore}}"><div>{{ThisoefeningModal.FearScore}}</div></div>
+			<div class="head_box">
+		  	<h1>{{ThisoefeningModal.Exposure}}</h1>
+		  	<span>{{ThisoefeningModal.Prevention}}</span>
+			</div>
+		</header>
+	  	<div class="buttonTabsContainer">
+	  		<button class="resultSideTab activeTab button button-icon" ng-click="buttonTabsClick()">INVOEREN</button>
+	  		<button class="resultEnterTab button button-icon" ng-click="buttonTabsClick()">RESULTATEN</button>
+  		</div>
+
+		  <div class="graph_header"></div>
+		  <div class="graph" data-graph="{{fearScores}}">
+		  	<div class="count">
+		  	</div>
+		  	<div class="graph_points">
+		  	</div>
+		  </div>
+		  <div class="graph_x-as">Datum</div>
+		  <div class="backlog" >
+		  	<div class="backlog_line"></div>
+		  	<div ng-repeat="log in ThisoefeningModal.Messages | reverse " class="log">
+		  		<div class="log_score s{{log.FearScore}}"><div>{{log.FearScore}}</div></div>
+		  		<div class="middle_line"></div>
+		  		<div class="text">
+		  			<div class="date">{{log.WrittenDate}}</div>
+		  			<div class="log_text">{{log.Message}}</div>
+		  		</div>
+		  	</div>
+		  </div>
+	</ion-content>
+  	<ion-content class="has-header contentPushDown resultEnter activeTab">
+		<header class="single">
+			<div class="head_score s{{ThisoefeningModal.FearScore}}"><div>{{ThisoefeningModal.FearScore}}</div></div>
+			<div class="head_box">
+		  	<h1>{{ThisoefeningModal.Exposure}}</h1>
+		  	<span>{{ThisoefeningModal.Prevention}}</span>
+			</div>
+		</header>
+	  	<div class="buttonTabsContainer">
+	  		<button class="resultSideTab activeTab button button-icon" ng-click="buttonTabsClick()">INVOEREN</button>
+	  		<button class="resultEnterTab button button-icon" ng-click="buttonTabsClick()">RESULTATEN</button>
+  		</div>
+  		<span class="{{error.class}}">{{error.text}}</span>
+		<form ng-submit="ResultModalSave()" class="formResultModal">
+			<span class="formSpan">Hoe angstig was je tijdens het <br >uitvoeren van deze oefening?</span>
+			<div class="containerSlider">
+			<div id='circle'>
+			  <div id='slider'></div>
+			</div>
+			<canvas id="counter" width="250" height="250"></canvas>
+			</div>
+
+			<input id="range" name="range" type="input" min="0" max="100" style="display:none;"/>
+
+			<span id="test" type="text" value="" class="range" data-max="100" data-min="0" data-step="10" name="angle"></span>
+
+			<label class="resultFormLabel" for="resultFormTextarea"><span class="ion-compose"></span><span>Aantekening toevoegen:</span></label>
+
+			<textarea name="resultFormTextarea" id="resultFormTextarea" ng-model="ResultModalData.Message" placeholder="Hoe heb je de oefening ervaren? Wat ging er goed, wat kan beter?"></textarea>
+		</form>
+		<button class="button button-icon ResultModalSave" ng-click="ResultModalSave()">OPSLAAN</button>
+  </ion-content>
+</ion-view>

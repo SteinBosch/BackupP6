@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Project 6</title>
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    /*   .animate-enter,
+        .animate-leave
+        {
+            -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+        }
+
+        .animate-enter {
+            left: 100%;
+        }
+        .animate-enter.animate-enter-active {
+            left: 0;
+        }
+
+        .animate-leave {
+            left: 0;
+        }*/
+    </style>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="js/vendor/jquery-latest.min.js"></script>
+    <script src="js/vendor/jquery.mobile.min.js"></script>
+    <script src="js/vendor/MooTools-Core-1.5.1.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular-ui/angular-ui-router.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/login.js"></script>
+    <script src="js/controller_appCtrl.js"></script>
+    <script src="js/controller_exercisePage.js"></script>
+    <script src="js/controller_exerciseDetailPage.js"></script>
+    <script src="js/controller_profilePage.js"></script>
+    <script src="js/dataservices.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/naturalSort.js"></script>
+    <!-- onderaan! -->
+    <script src="js/app.js"></script>
+
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+/*single oefening - header */
+.single {
+    height: 100px;
+    padding: 10px;
+    line-height: 70px;
+    position: relative;
+    background-color: #F4F4F4;
+}
+.single .head_score {
+    width: 5em;
+    height: 5em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    border-radius: 5em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.single .head_score div{
+	display: table;
+	margin: auto;
+	font-size: 2em;
+	vertical-align: middle;
+	position: relative;
+	color: #fdfdfd;
+}
+.head_box {
+    margin-left: 6em;
+}
+.single h1 {
+    font-size: 16px;
+    display: block;
+    margin: 0;
+    font-family: 'open_sanssemibold';
+    vertical-align: top;
+    line-height: normal;
+}
+.head_box span {
+    display: block;
+    line-height: normal;
+    margin-top: 0;
+    color: #a0a0a0;
+}
